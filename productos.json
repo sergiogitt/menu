@@ -1,0 +1,146 @@
+{
+    "entradas": [
+        {
+            "nombre": {
+                "es": "Bruschetta",
+                "en": "Bruschetta",
+                "fr": "Bruschetta"
+            },
+            "precio": 5.00,
+            "alergenos": [
+                "cereales",
+                "lacteos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Ensalada Caprese",
+                "en": "Caprese Salad",
+                "fr": "Salade Caprese"
+            },
+            "precio": 6.50,
+            "alergenos": [
+                "lacteos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Gambas al Ajillo",
+                "en": "Garlic Shrimp",
+                "fr": "Crevettes à l'Ail"
+            },
+            "precio": 7.00,
+            "alergenos": [
+                "crustaceo"
+            ]
+        }
+    ],
+    "platos-principales": [
+        {
+            "nombre": {
+                "es": "Paella",
+                "en": "Paella",
+                "fr": "Paella"
+            },
+            "precio": 15.00,
+            "alergenos": [
+                "cereales",
+                "crustaceo"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Filete a la Parrilla",
+                "en": "Grilled Steak",
+                "fr": "Steak Grillé"
+            },
+            "precio": 18.00,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Lasaña de Carne",
+                "en": "Beef Lasagna",
+                "fr": "Lasagne à la Viande"
+            },
+            "precio": 14.00,
+            "alergenos": [
+                "cereales",
+                "lacteos"
+            ]
+        }
+    ],
+    "bebidas": [
+        {
+            "nombre": {
+                "es": "Cerveza",
+                "en": "Beer",
+                "fr": "Bière"
+            },
+            "precio": 3.00,
+            "alergenos": [
+                "cereales"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Vino Tinto",
+                "en": "Red Wine",
+                "fr": "Vin Rouge"
+            },
+            "precio": 5.00,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Cóctel Margarita",
+                "en": "Margarita Cocktail",
+                "fr": "Cocktail Margarita"
+            },
+            "precio": 8.00,
+            "alergenos": []
+        }
+    ],
+    "postres": [
+        {
+            "nombre": {
+                "es": "Tarta de Queso",
+                "en": "Cheesecake",
+                "fr": "Gâteau au Fromage"
+            },
+            "precio": 4.50,
+            "alergenos": [
+                "lacteos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Brownie de Chocolate",
+                "en": "Chocolate Brownie",
+                "fr": "Brownie au Chocolat"
+            },
+            "precio": 4.00,
+            "alergenos": [
+                "cereales",
+                "lacteos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Tiramisu",
+                "en": "Tiramisu",
+                "fr": "Tiramisu"
+            },
+            "precio": 5.00,
+            "alergenos": [
+                "lacteos",
+                "huevos"
+            ]
+        }
+    ]
+}
+
+
+
+
+

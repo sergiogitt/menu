@@ -1,0 +1,15 @@
+{
+    "headerTitle": "Le Menu",
+    "headerSubtitle": "Bar Élégant",
+    "allergensTitle": "Filtre Allergies",
+    "entradas": "Entrées",
+    "platos-principales": "Plats Principaux",
+    "bebidas": "Boissons",
+    "postres": "Desserts",
+    "gluten": "Gluten",
+    "lactosa": "Lactose",
+    "huevo": "Œuf",
+    "soja": "Soja",
+    "pescado": "Poisson",
+    "sectionNoProducts": "Aucun produit disponible pour vos sélections."
+}

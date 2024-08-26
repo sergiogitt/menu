@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La Carta - Bar Elegante</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+
+
+    <body>
+        <div class="dropdown">
+            <button class="dropdown-button" id="dropdownButton"></button>
+            <div class="dropdown-content" id="dropdownMenu">
+                <ul>
+                    <li data-value="es" id="es">ES</li>
+                    <li data-value="en" id="en">EN</li>
+                    <li data-value="fr" id="fr">FR</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <header>
+            <h1 data-i18n="headerTitle">La Carta</h1>
+            <p data-i18n="headerSubtitle">Bar Elegante</p>
+        </header>
+
+
+        <nav>
+            <ul>
+                <li><a data-i18n="entradas" class="active" onclick="showSection('entradas')"></a></li>
+                <li><a data-i18n="platos-principales"
+                        onclick="showSection('platos-principales');"></a>
+                </li>
+                <li><a data-i18n="bebidas" onclick="showSection('bebidas')"></a></li>
+                <li><a data-i18n="postres" onclick="showSection('postres')"></a></li>
+            </ul>
+            
+        </nav>
+
+
+        <div id="modal-container">
+            <div class="modal-background">
+                <div class="modal">
+                    <div>
+                        <span id="closeModalBtn" class="close-btn">&times;</span>
+                    </div>
+                    <div class="modal-content">
+                        <h2 data-i18n="allergensTitle">Selecciona tus alérgenos</h2>
+                        <label>
+                            <input type="checkbox" value="gluten" onchange="filterProducts()">
+                            <span data-i18n="gluten"></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="lactosa" onchange="filterProducts()">
+                            <span data-i18n="lactosa"></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="huevo" onchange="filterProducts()">
+                            <span data-i18n="huevo"></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="soja" onchange="filterProducts()">
+                            <span data-i18n="soja"></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="pescado" onchange="filterProducts()">
+                            <span data-i18n="pescado"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <section id="content">
+            </section>
+        </div>
+        
+        <footer>
+            <p>© 2024 Bar Elegante. Todos los derechos reservados.</p>
+        </footer>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

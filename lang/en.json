@@ -1,0 +1,15 @@
+{
+    "headerTitle": "The Menu",
+    "headerSubtitle": "Elegant Bar",
+    "allergensTitle": "Filter Allergens",
+    "entradas": "Starters",
+    "platos-principales": "Main Dishes",
+    "bebidas": "Drinks",
+    "postres": "Desserts",
+    "gluten": "Gluten",
+    "lactosa": "Lactose",
+    "huevo": "Egg",
+    "soja": "Soy",
+    "pescado": "Fish",
+    "sectionNoProducts": "No products available for your selections."
+}

@@ -1,0 +1,15 @@
+{
+    "headerTitle": "El Menú",
+    "headerSubtitle": "Bar Elegante",
+    "allergensTitle": "Filtro alergicos",
+    "entradas": "Entradas",
+    "platos-principales": "Platos Principales",
+    "bebidas": "Bebidas",
+    "postres": "Postres",
+    "gluten": "Gluten",
+    "lactosa": "Lactosa",
+    "huevo": "Huevo",
+    "soja": "Soja",
+    "pescado": "Pescado",
+    "sectionNoProducts": "No hay productos disponibles para tus selecciones."
+}
