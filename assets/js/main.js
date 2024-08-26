@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
             productos = data;
             showSection('entradas');
         });
-    const language = localStorage.getItem('language') || 'en';
-
-
 });
 
 
@@ -31,16 +28,18 @@ function showSection(section) {
         }
         return !producto.alergenos.some(alergeno => alergenosSeleccionados.includes(alergeno));
     });
+console.log(productosFiltrados);
 
 
     htmlContent = `<div id="sectionWrapper">
-                    <button id="openModalBtn" class="button" onclick="openModal()">
-                        <img class="icon" src="assets/img/filter.svg"/>
-                        <span data-i18n="allergensTitle"></span>
-                    </button>
-                    <h2 data-i18n="${section}">
-                
-                    </h2>
+                    
+                    <h3>
+                        <span data-i18n="${section}"></span>
+                        <button id="openModalBtn" class="button" onclick="openModal()">
+                            <img class="icon" src="assets/img/filter.svg"/>
+                            <span id="allergensTitle"  data-i18n="allergensTitle"></span>
+                        </button>
+                    </h3>
                     <ul>
                         ${productosFiltrados.length > 0 ?
                             productosFiltrados.map(producto => `
@@ -112,8 +111,11 @@ function filterProducts() {
     checkboxes.forEach(checkbox => {
         if (checkbox.checked) {
             alergenosSeleccionados.push(checkbox.value);
+            console.log(checkbox);
         }
     });
+    
+    
     showSection(actualSection);
 }
 
@@ -195,7 +197,6 @@ window.addEventListener('click', (event) => {
 });
 function openModal() {
     var modalContainer = document.getElementById('modal-container');
-    console.log("in");
     modalContainer.className = '';
     modalContainer.classList.add('six');
 

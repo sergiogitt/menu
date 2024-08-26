@@ -24,7 +24,6 @@
 
         <header>
             <h1 data-i18n="headerTitle">La Carta</h1>
-            <p data-i18n="headerSubtitle">Bar Elegante</p>
         </header>
 
 
@@ -44,21 +43,21 @@
         <div id="modal-container">
             <div class="modal-background">
                 <div class="modal">
-                    <div>
+                    <div id="closeModalWrapper">
                         <span id="closeModalBtn" class="close-btn">&times;</span>
                     </div>
                     <div class="modal-content">
                         <h2 data-i18n="allergensTitle">Selecciona tus alérgenos</h2>
                         <label>
-                            <input type="checkbox" value="gluten" onchange="filterProducts()">
+                            <input type="checkbox" value="cereales" onchange="filterProducts()">
                             <span data-i18n="gluten"></span>
                         </label>
                         <label>
-                            <input type="checkbox" value="lactosa" onchange="filterProducts()">
+                            <input type="checkbox" value="lacteos" onchange="filterProducts()">
                             <span data-i18n="lactosa"></span>
                         </label>
                         <label>
-                            <input type="checkbox" value="huevo" onchange="filterProducts()">
+                            <input type="checkbox" value="huevos" onchange="filterProducts()">
                             <span data-i18n="huevo"></span>
                         </label>
                         <label>
@@ -79,7 +78,8 @@
         </div>
         
         <footer>
-            <p>© 2024 Bar Elegante. Todos los derechos reservados.</p>
+            <p>© 2024 Bar Elegante.</p>
+            <p> Todos los derechos reservados.</p>
         </footer>
         <script src="assets/js/main.js"></script>
     </body>
