@@ -57,7 +57,7 @@ function showSection(section) {
 }
 
 async function fetchLanguageData(lang) {
-    await fetch(`/lang/${lang}.json`).then(response => response.json())
+    await fetch(`lang/${lang}.json`).then(response => response.json())
     .then(response => {
         langData = response
         updateContent()
