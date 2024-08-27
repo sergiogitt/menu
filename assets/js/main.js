@@ -2,10 +2,11 @@ let productos = {};
 let alergenosSeleccionados = [];
 let globalLanguage = "es";
 let actualSection = "entradas";
-
+let langData = {};
 if (!localStorage.getItem('language')) {
     localStorage.setItem('language', "es");
 }
+fetchLanguageData(localStorage.getItem('language'));
 document.getElementById('dropdownButton').textContent = localStorage.getItem('language').toUpperCase();
 document.getElementById(localStorage.getItem('language')).classList.add('selected');
 document.addEventListener("DOMContentLoaded", function () {
@@ -28,82 +29,39 @@ function showSection(section) {
         }
         return !producto.alergenos.some(alergeno => alergenosSeleccionados.includes(alergeno));
     });
-console.log(productosFiltrados);
-
 
     htmlContent = `<div id="sectionWrapper">
-                    
-                    <h3>
-                        <span data-i18n="${section}"></span>
-                        <button id="openModalBtn" class="button" onclick="openModal()">
-                            <img class="icon" src="assets/img/filter.svg"/>
-                            <span id="allergensTitle"  data-i18n="allergensTitle"></span>
-                        </button>
-                    </h3>
-                    <ul>
-                        ${productosFiltrados.length > 0 ?
-                            productosFiltrados.map(producto => `
-                                <li>
-                                    ${producto.nombre[localStorage.getItem('language')]} ${producto.alergenos.map(alergeno => `<img src="assets/img/${alergeno}.png" alt="${alergeno}">`).join('')}  <span class="price">${producto.precio.toFixed(2)}€</span>
-                                    
-                                </li>
-                            `).join('') :
-                            `<li>No hay productos disponibles para tus selecciones.</li>`
-                        }
-                    </ul>
-                </div>
-            `;
+        <h3>
+            <span data-i18n="${section}"></span>
+            <button id="openModalBtn" class="button" onclick="openModal()">
+                <img class="icon" src="assets/img/filter.svg"/>
+                <span id="allergensTitle"  data-i18n="allergensTitle"></span>
+            </button>
+        </h3>
+        <ul>
+            ${productosFiltrados.length > 0 ?
+                productosFiltrados.map(producto => `
+                    <li>
+                        ${producto.nombre[localStorage.getItem('language')]} ${producto.alergenos.map(alergeno => `<img src="assets/img/${alergeno}.png" alt="${alergeno}">`).join('')}  <span class="price">${producto.precio.toFixed(2)}€</span>
+                        
+                    </li>
+                `).join('') :
+                `<li>No hay productos disponibles para tus selecciones.</li>`
+            }
+        </ul>
+    </div>`;
     content.innerHTML = htmlContent;
-    force();
+    updateContent();
 }
+
 async function fetchLanguageData(lang) {
-    const response = await fetch(`lang/${lang}.json`);
-    return response.json();
-}
-
-
-function setLanguagePreference(lang) {
-    localStorage.setItem('language', lang);
-    location.reload();
-}
-
-
-// Function to update content based on selected language
-function updateContent(langData) {
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-
-
-
-        const key = element.getAttribute('data-i18n');
-        element.textContent = langData[key];
+    await fetch(`/lang/${lang}.json`).then(response => response.json())
+    .then(response => {
+        langData = response
+        updateContent()
     });
+    
 }
-
-
-async function changeLanguage(lang) {
-    setLanguagePreference(lang);
-    const langData = await fetchLanguageData(lang);
-    updateContent(langData);
-}
-
-
-async function force() {
-    const userPreferredLanguage = localStorage.getItem('language') || 'en';
-    const langData = await fetchLanguageData(userPreferredLanguage);
-    updateContent(langData);
-}
-
-
-window.addEventListener('DOMContentLoaded', async () => {
-    const userPreferredLanguage = localStorage.getItem('language') || 'en';
-    const langData = await fetchLanguageData(userPreferredLanguage);
-    updateContent(langData);
-});
-async function fetchLanguageData(lang) {
-    const response = await fetch(`lang/${lang}.json`);
-    return response.json();
-}
-
 
 function filterProducts() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -118,8 +76,6 @@ function filterProducts() {
     
     showSection(actualSection);
 }
-
-
 document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', function () {
         document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
@@ -127,9 +83,6 @@ document.querySelectorAll('nav ul li a').forEach(link => {
         showSection(actualSection);
     });
 });
-
-
-
 document.getElementById('closeModalBtn').addEventListener('click', function (event) {
     document.getElementById('modal-container').classList.add('out');
     document.body.classList.remove('modal-active');
@@ -142,7 +95,6 @@ document.getElementById('closeModalBtn').addEventListener('click', function (eve
 
 });
 
-
 window.addEventListener('click', function (event) {
     var modal = document.getElementById('modal');
     if (event.target === modal) {
@@ -151,43 +103,21 @@ window.addEventListener('click', function (event) {
 });
 const button = document.getElementById('dropdownButton');
 const menu = document.getElementById('dropdownMenu');
-
-
 button.addEventListener('click', () => {
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 });
-
-
 menu.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI') {
         const selectedValue = event.target.getAttribute('data-value');
         const selectedText = event.target.textContent;
-
-
-        // Update button text
         button.textContent = selectedText;
-
-
-        // Add selected class to clicked item
         document.querySelectorAll('.dropdown-content li').forEach(li => li.classList.remove('selected'));
         event.target.classList.add('selected');
-
-
-        // Hide the dropdown menu
         menu.style.display = 'none';
-
-
-        // Trigger change language function
-        changeLanguage(selectedValue);
+        localStorage.setItem('language', selectedValue);
+        location.reload();
     }
 });
-
-
-
-
-
-
-// Close the dropdown if clicked outside
 window.addEventListener('click', (event) => {
     if (!event.target.matches('.dropdown-button')) {
         if (menu.style.display === 'block') {
@@ -202,5 +132,12 @@ function openModal() {
 
 
     document.body.classList.add('modal-active');
+}
+function updateContent() {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+
+        element.textContent = langData[key];
+    });
 }
 
