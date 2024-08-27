@@ -23,6 +23,8 @@ function showSection(section) {
     const content = document.getElementById('content');
     let htmlContent = '';
     actualSection = section;
+    document.getElementById('menuBtn').classList.remove('act');
+    document.getElementById('mainMenu').classList.remove('act');
     const productosFiltrados = productos[section].filter(producto => {
         if (alergenosSeleccionados.length === 0) {
             return true;
@@ -94,6 +96,10 @@ document.getElementById('closeModalBtn').addEventListener('click', function (eve
 
 
 });
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
 
 window.addEventListener('click', function (event) {
     var modal = document.getElementById('modal');
@@ -141,3 +147,14 @@ function updateContent() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    // menu click event
+    document.querySelector('.menuBtn').addEventListener('click', function() {
+        this.classList.toggle('act');
+        if (this.classList.contains('act')) {
+            document.querySelector('.mainMenu').classList.add('act');
+        } else {
+            document.querySelector('.mainMenu').classList.remove('act');
+        }
+    });
+});
