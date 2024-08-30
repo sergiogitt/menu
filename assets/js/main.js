@@ -32,7 +32,8 @@ function showSection(section) {
         return !producto.alergenos.some(alergeno => alergenosSeleccionados.includes(alergeno));
     });
 
-    htmlContent = `<div id="sectionWrapper">
+    htmlContent = `
+    <div id="sectionWrapper">
         <h3>
             <span data-i18n="${section}"></span>
             <button id="openModalBtn" class="button" onclick="openModal()">
@@ -44,7 +45,12 @@ function showSection(section) {
             ${productosFiltrados.length > 0 ?
                 productosFiltrados.map(producto => `
                     <li>
-                        ${producto.nombre[localStorage.getItem('language')]} ${producto.alergenos.map(alergeno => `<img src="assets/img/${alergeno}.png" alt="${alergeno}">`).join('')}  <span class="price">${producto.precio.toFixed(2)}€</span>
+                        <div class="price-wrapper">
+                            <span class="item-name">${producto.nombre[localStorage.getItem('language')]}</span>
+                            ${producto.alergenos.map(alergeno => `<img title="${alergeno.toUpperCase()}" src="assets/img/${alergeno}.png" alt="${alergeno}">`).join('')}
+                            <span class="price">${producto.precio.toFixed(2)}€</span>
+                        </div>
+                        <div>${producto.nombre[localStorage.getItem('language')]}</div>
                         
                     </li>
                 `).join('') :

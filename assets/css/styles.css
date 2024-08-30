@@ -240,9 +240,7 @@ section ul {
 section ul li {
     font-size: 1.2em;
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    align-items: center;
+    
 }
 
 
@@ -468,7 +466,18 @@ body.modal-active {
     color: #333333;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.price-wrapper{
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.3rem;
 
+}
+.price-wrapper .item-name{ 
+    color: #bb0000;
+        font-weight: 600;
+
+}
 
 .dropdown-content li:hover {
     background-color: #f1f1f1;
