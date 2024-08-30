@@ -2,7 +2,7 @@
     "headerTitle": "Le Menu",
     "headerSubtitle": "Bar Élégant",
     "allergensTitle": "Filtre Allergies",
-    "entradas": "Entrées",
+    "entrantes": "Entrées",
     "platos-principales": "Plats Principaux",
     "bebidas": "Boissons",
     "postres": "Desserts",
@@ -12,5 +12,9 @@
     "soja": "Soja",
     "pescado": "Poisson",
     "copyright":"Tous droits réservés.",
+    "meat": "Viandes",
+    "racion": "Ration",
+    "refrescos" : "Rafraîchissements",
+    "caseros" : "Fait maison",
     "sectionNoProducts": "Aucun produit disponible pour vos sélections."
 }

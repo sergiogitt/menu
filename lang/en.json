@@ -2,7 +2,7 @@
     "headerTitle": "The Menu",
     "headerSubtitle": "Elegant Bar",
     "allergensTitle": "Filter Allergens",
-    "entradas": "Starters",
+    "entrantes": "Starters",
     "platos-principales": "Main Dishes",
     "bebidas": "Drinks",
     "postres": "Desserts",
@@ -12,5 +12,9 @@
     "soja": "Soy",
     "pescado": "Fish",
     "copyright":"All rights reserved.",
+    "meat": "Meat",
+    "racion": "Ration",
+    "refrescos" : "Soft drinks",
+    "caseros" : "Homemade",
     "sectionNoProducts": "No products available for your selections."
 }

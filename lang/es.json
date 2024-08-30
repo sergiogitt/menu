@@ -2,7 +2,7 @@
     "headerTitle": "El Menú",
     "headerSubtitle": "Bar Elegante",
     "allergensTitle": "Filtro alergicos",
-    "entradas": "Entradas",
+    "entrantes": "Entrantes",
     "platos-principales": "Platos Principales",
     "bebidas": "Bebidas",
     "postres": "Postres",
@@ -12,5 +12,10 @@
     "soja": "Soja",
     "pescado": "Pescado",
     "copyright":"Todos los derechos reservados.",
+    "meat": "Carne",
+    "frios": "Frios",
+    "racion" : "Ración",
+    "refrescos" : "Refrescos",
+    "caseros" : "Caseros",
     "sectionNoProducts": "No hay productos disponibles para tus selecciones."
 }

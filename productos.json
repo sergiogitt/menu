@@ -1,12 +1,35 @@
 {
-    "entradas": [
+    "entrantes": [
         {
             "nombre": {
                 "es": "Bruschetta",
                 "en": "Bruschetta",
                 "fr": "Bruschetta"
             },
+            "descripcion": {
+                "es": "Pan tostado con tomate, ajo y albahaca.",
+                "en": "Toasted bread with tomato, garlic, and basil.",
+                "fr": "Pain grillé avec tomate, ail et basilic."
+            },
             "precio": 5.00,
+            "alergenos": [
+                "cereales",
+                "lacteos"
+            ],
+            "subcategory": "frios"
+        },
+        {
+            "nombre": {
+                "es": "Croquetas de Jamón",
+                "en": "Ham Croquettes",
+                "fr": "Croquettes au Jambon"
+            },
+            "descripcion": {
+                "es": "Croquetas crujientes rellenas de jamón.",
+                "en": "Crispy croquettes filled with ham.",
+                "fr": "Croquettes croustillantes garnies de jambon."
+            },
+            "precio": 6.00,
             "alergenos": [
                 "cereales",
                 "lacteos"
@@ -17,6 +40,11 @@
                 "es": "Ensalada Caprese",
                 "en": "Caprese Salad",
                 "fr": "Salade Caprese"
+            },
+            "descripcion": {
+                "es": "Ensalada de tomate, mozzarella y albahaca.",
+                "en": "Salad with tomato, mozzarella, and basil.",
+                "fr": "Salade avec tomate, mozzarella et basilic."
             },
             "precio": 6.50,
             "alergenos": [
@@ -29,11 +57,67 @@
                 "en": "Garlic Shrimp",
                 "fr": "Crevettes à l'Ail"
             },
+            "descripcion": {
+                "es": "Gambas cocidas en aceite con ajo.",
+                "en": "Shrimps cooked in garlic oil.",
+                "fr": "Crevettes cuites à l'huile avec de l'ail."
+            },
+            "precio": 7.00,
+            "alergenos": [
+                "crustaceo"
+            ],
+            "subcategory": "meat"
+        },
+        {
+            "nombre": {
+                "es": "Tacos de Carne",
+                "en": "Beef Tacos",
+                "fr": "Tacos de Viande"
+            },
+            "descripcion": {
+                "es": "Tacos rellenos de carne de res sazonada.",
+                "en": "Tacos filled with seasoned beef.",
+                "fr": "Tacos garnis de viande de boeuf assaisonnée."
+            },
+            "precio": 6.00,
+            "alergenos": [
+                "cereales"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Ensalada Caprese",
+                "en": "Caprese Salad",
+                "fr": "Salade Caprese"
+            },
+            "descripcion": {
+                "es": "Ensalada de tomate, mozzarella y albahaca.",
+                "en": "Salad with tomato, mozzarella, and basil.",
+                "fr": "Salade avec tomate, mozzarella et basilic."
+            },
+            "precio": 6.50,
+            "alergenos": [
+                "lacteos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Gambas al Ajillo",
+                "en": "Garlic Shrimp",
+                "fr": "Crevettes à l'Ail"
+            },
+            "descripcion": {
+                "es": "Gambas cocidas en aceite con ajo.",
+                "en": "Shrimps cooked in garlic oil.",
+                "fr": "Crevettes cuites à l'huile avec de l'ail."
+            },
             "precio": 7.00,
             "alergenos": [
                 "crustaceo"
             ]
         }
+        
+        
     ],
     "platos-principales": [
         {
@@ -42,17 +126,28 @@
                 "en": "Paella",
                 "fr": "Paella"
             },
+            "descripcion": {
+                "es": "Arroz con mariscos y azafrán.",
+                "en": "Rice with seafood and saffron.",
+                "fr": "Riz avec fruits de mer et safran."
+            },
             "precio": 15.00,
             "alergenos": [
                 "cereales",
                 "crustaceo"
-            ]
+            ],
+            "subcategory": "racion"
         },
         {
             "nombre": {
                 "es": "Filete a la Parrilla",
                 "en": "Grilled Steak",
                 "fr": "Steak Grillé"
+            },
+            "descripcion": {
+                "es": "Filete de res cocido a la parrilla.",
+                "en": "Grilled beef steak.",
+                "fr": "Steak de boeuf grillé."
             },
             "precio": 18.00,
             "alergenos": []
@@ -63,11 +158,168 @@
                 "en": "Beef Lasagna",
                 "fr": "Lasagne à la Viande"
             },
+            "descripcion": {
+                "es": "Lasaña con carne molida y bechamel.",
+                "en": "Lasagna with ground beef and béchamel.",
+                "fr": "Lasagne avec bœuf haché et béchamel."
+            },
             "precio": 14.00,
             "alergenos": [
                 "cereales",
                 "lacteos"
+            ],
+            "subcategory": "dish"
+        },
+        {
+            "nombre": {
+                "es": "Pollo al Curry",
+                "en": "Chicken Curry",
+                "fr": "Poulet au Curry"
+            },
+            "descripcion": {
+                "es": "Pollo cocido en salsa de curry con arroz.",
+                "en": "Chicken cooked in curry sauce with rice.",
+                "fr": "Poulet cuit dans une sauce au curry avec riz."
+            },
+            "precio": 13.00,
+            "alergenos": [
+                "cereales"
+            ],
+            "subcategory": "dish"
+        },
+        {
+            "nombre": {
+                "es": "Pizza Margarita",
+                "en": "Margherita Pizza",
+                "fr": "Pizza Margherita"
+            },
+            "descripcion": {
+                "es": "Pizza con tomate, mozzarella y albahaca.",
+                "en": "Pizza with tomato, mozzarella, and basil.",
+                "fr": "Pizza avec tomate, mozzarella et basilic."
+            },
+            "precio": 12.00,
+            "alergenos": [
+                "cereales",
+                "lacteos"
+            ],
+            "subcategory": "dish"
+        },
+        {
+            "nombre": {
+                "es": "Ratatouille",
+                "en": "Ratatouille",
+                "fr": "Ratatouille"
+            },
+            "descripcion": {
+                "es": "Guiso de vegetales provenzales.",
+                "en": "Provençal vegetable stew.",
+                "fr": "Ragoût de légumes provençaux."
+            },
+            "precio": 11.00,
+            "alergenos": [],
+            "subcategory": "dish"
+        },
+        {
+            "nombre": {
+                "es": "Risotto de Champiñones",
+                "en": "Mushroom Risotto",
+                "fr": "Risotto aux Champignons"
+            },
+            "descripcion": {
+                "es": "Arroz cremoso con champiñones.",
+                "en": "Creamy rice with mushrooms.",
+                "fr": "Riz crémeux aux champignons."
+            },
+            "precio": 14.00,
+            "alergenos": [
+                "lacteos"
+            ],
+            "subcategory": "meat"
+        },
+        {
+            "nombre": {
+                "es": "Costillas de Cerdo",
+                "en": "Pork Ribs",
+                "fr": "Côtes de Porc"
+            },
+            "descripcion": {
+                "es": "Costillas a la barbacoa con guarnición.",
+                "en": "Barbecue ribs with sides.",
+                "fr": "Côtes de porc barbecue avec garnitures."
+            },
+            "precio": 17.00,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Bacalao a la Vizcaína",
+                "en": "Basque-Style Cod",
+                "fr": "Morue à la Basquaise"
+            },
+            "descripcion": {
+                "es": "Bacalao en salsa de tomate y pimientos.",
+                "en": "Cod in tomato and pepper sauce.",
+                "fr": "Morue dans une sauce tomate et poivrons."
+            },
+            "precio": 16.00,
+            "alergenos": [
+                "pescado"
+            ],
+            "subcategory": "dish"
+        },
+        {
+            "nombre": {
+                "es": "Fajitas de Pollo",
+                "en": "Chicken Fajitas",
+                "fr": "Fajitas de Poulet"
+            },
+            "descripcion": {
+                "es": "Tiras de pollo con pimientos y cebolla.",
+                "en": "Chicken strips with peppers and onions.",
+                "fr": "Lanières de poulet avec poivrons et oignons."
+            },
+            "precio": 13.00,
+            "alergenos": [
+                "cereales"
             ]
+        },
+        {
+            "nombre": {
+                "es": "Tagliatelle al Pesto",
+                "en": "Tagliatelle with Pesto",
+                "fr": "Tagliatelles au Pesto"
+            },
+            "descripcion": {
+                "es": "Pasta tagliatelle con salsa pesto.",
+                "en": "Tagliatelle pasta with pesto sauce.",
+                "fr": "Tagliatelles avec sauce pesto."
+            },
+            "precio": 12.00,
+            "alergenos": [
+                "cereales",
+                "lacteos"
+            ],
+            "subcategory": "dish"
+        },
+        {
+            "nombre": {
+                "es": "Pasta Carbonara",
+                "en": "Carbonara Pasta",
+                "fr": "Pâtes Carbonara"
+            },
+            "descripcion": {
+                "es": "Pasta con salsa de huevo, panceta y queso.",
+                "en": "Pasta with egg sauce, pancetta, and cheese.",
+                "fr": "Pâtes avec sauce aux œufs, pancetta et fromage."
+            },
+            "precio": 13.00,
+            "alergenos": [
+                "cereales",
+                "lacteos",
+                "huevos"
+            ],
+            "subcategory": "dish"
         }
     ],
     "bebidas": [
@@ -77,16 +329,27 @@
                 "en": "Beer",
                 "fr": "Bière"
             },
+            "descripcion": {
+                "es": "Cerveza refrescante de barril.",
+                "en": "Refreshing draft beer.",
+                "fr": "Bière fraîche pression."
+            },
             "precio": 3.00,
             "alergenos": [
                 "cereales"
-            ]
+            ],
+            "subcategory": "refrescos"
         },
         {
             "nombre": {
                 "es": "Vino Tinto",
                 "en": "Red Wine",
                 "fr": "Vin Rouge"
+            },
+            "descripcion": {
+                "es": "Vino tinto de la casa.",
+                "en": "House red wine.",
+                "fr": "Vin rouge de la maison."
             },
             "precio": 5.00,
             "alergenos": []
@@ -97,7 +360,110 @@
                 "en": "Margarita Cocktail",
                 "fr": "Cocktail Margarita"
             },
+            "descripcion": {
+                "es": "Cóctel de tequila con limón y sal.",
+                "en": "Tequila cocktail with lime and salt.",
+                "fr": "Cocktail de tequila avec citron vert et sel."
+            },
             "precio": 8.00,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Mojito",
+                "en": "Mojito",
+                "fr": "Mojito"
+            },
+            "descripcion": {
+                "es": "Cóctel refrescante de ron con menta y lima.",
+                "en": "Refreshing rum cocktail with mint and lime.",
+                "fr": "Cocktail rafraîchissant au rhum avec menthe et citron vert."
+            },
+            "precio": 8.50,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Sangría",
+                "en": "Sangria",
+                "fr": "Sangria"
+            },
+            "descripcion": {
+                "es": "Cóctel de vino tinto con frutas y especias.",
+                "en": "Red wine cocktail with fruits and spices.",
+                "fr": "Cocktail de vin rouge avec fruits et épices."
+            },
+            "precio": 6.00,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Jugo de Naranja",
+                "en": "Orange Juice",
+                "fr": "Jus d'Orange"
+            },
+            "descripcion": {
+                "es": "Jugo fresco de naranja.",
+                "en": "Fresh orange juice.",
+                "fr": "Jus d'orange frais."
+            },
+            "precio": 4.00,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Agua Mineral",
+                "en": "Mineral Water",
+                "fr": "Eau Minérale"
+            },
+            "descripcion": {
+                "es": "Agua mineral con o sin gas.",
+                "en": "Mineral water with or without gas.",
+                "fr": "Eau minérale avec ou sans gaz."
+            },
+            "precio": 2.50,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Café",
+                "en": "Coffee",
+                "fr": "Café"
+            },
+            "descripcion": {
+                "es": "Café recién hecho.",
+                "en": "Freshly brewed coffee.",
+                "fr": "Café fraîchement préparé."
+            },
+            "precio": 2.00,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Te",
+                "en": "Tea",
+                "fr": "Thé"
+            },
+            "descripcion": {
+                "es": "Té caliente o frío.",
+                "en": "Hot or iced tea.",
+                "fr": "Thé chaud ou glacé."
+            },
+            "precio": 2.50,
+            "alergenos": []
+        },
+        {
+            "nombre": {
+                "es": "Cóctel de Frutas",
+                "en": "Fruit Cocktail",
+                "fr": "Cocktail de Fruits"
+            },
+            "descripcion": {
+                "es": "Cóctel de frutas frescas y jugos.",
+                "en": "Cocktail of fresh fruits and juices.",
+                "fr": "Cocktail de fruits frais et jus."
+            },
+            "precio": 6.50,
             "alergenos": []
         }
     ],
@@ -108,16 +474,27 @@
                 "en": "Cheesecake",
                 "fr": "Gâteau au Fromage"
             },
+            "descripcion": {
+                "es": "Tarta suave de queso crema.",
+                "en": "Smooth cream cheese cake.",
+                "fr": "Gâteau au fromage crémeux."
+            },
             "precio": 4.50,
             "alergenos": [
                 "lacteos"
-            ]
+            ],
+            "subcategory": "caseros"
         },
         {
             "nombre": {
                 "es": "Brownie de Chocolate",
                 "en": "Chocolate Brownie",
                 "fr": "Brownie au Chocolat"
+            },
+            "descripcion": {
+                "es": "Pastelito de chocolate con nueces.",
+                "en": "Chocolate cake with nuts.",
+                "fr": "Gâteau au chocolat avec des noix."
             },
             "precio": 4.00,
             "alergenos": [
@@ -131,7 +508,127 @@
                 "en": "Tiramisu",
                 "fr": "Tiramisu"
             },
+            "descripcion": {
+                "es": "Postre italiano con café y mascarpone.",
+                "en": "Italian dessert with coffee and mascarpone.",
+                "fr": "Dessert italien avec café et mascarpone."
+            },
             "precio": 5.00,
+            "alergenos": [
+                "lacteos",
+                "huevos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Crème Brûlée",
+                "en": "Crème Brûlée",
+                "fr": "Crème Brûlée"
+            },
+            "descripcion": {
+                "es": "Pudding de vainilla con caramelizado.",
+                "en": "Vanilla custard with a caramelized top.",
+                "fr": "Crème vanille avec un dessus caramélisé."
+            },
+            "precio": 5.50,
+            "alergenos": [
+                "lacteos",
+                "huevos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Panna Cotta",
+                "en": "Panna Cotta",
+                "fr": "Panna Cotta"
+            },
+            "descripcion": {
+                "es": "Postre italiano de crema cocida con frutos rojos.",
+                "en": "Italian cooked cream dessert with berries.",
+                "fr": "Dessert italien de crème cuite avec des fruits rouges."
+            },
+            "precio": 5.00,
+            "alergenos": [
+                "lacteos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Gelato",
+                "en": "Gelato",
+                "fr": "Gelato"
+            },
+            "descripcion": {
+                "es": "Helado italiano en varios sabores.",
+                "en": "Italian ice cream in various flavors.",
+                "fr": "Glace italienne en plusieurs saveurs."
+            },
+            "precio": 4.50,
+            "alergenos": [
+                "lacteos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Sorbete de Frutas",
+                "en": "Fruit Sorbet",
+                "fr": "Sorbet aux Fruits"
+            },
+            "descripcion": {
+                "es": "Sorbete refrescante de frutas naturales.",
+                "en": "Refreshing sorbet made from natural fruits.",
+                "fr": "Sorbet rafraîchissant à base de fruits naturels."
+            },
+            "precio": 4.50,
+            "alergenos": [],
+            "subcategory": "caseros"
+        },
+        {
+            "nombre": {
+                "es": "Crumble de Manzana",
+                "en": "Apple Crumble",
+                "fr": "Crumble aux Pommes"
+            },
+            "descripcion": {
+                "es": "Crumble de manzana con una capa crujiente.",
+                "en": "Apple crumble with a crunchy topping.",
+                "fr": "Crumble aux pommes avec une couche croustillante."
+            },
+            "precio": 4.50,
+            "alergenos": [
+                "cereales",
+                "lacteos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Mousse de Chocolate",
+                "en": "Chocolate Mousse",
+                "fr": "Mousse au Chocolat"
+            },
+            "descripcion": {
+                "es": "Mousse de chocolate suave y aireada.",
+                "en": "Smooth and airy chocolate mousse.",
+                "fr": "Mousse au chocolat lisse et aérienne."
+            },
+            "precio": 4.00,
+            "alergenos": [
+                "lacteos",
+                "huevos"
+            ]
+        },
+        {
+            "nombre": {
+                "es": "Flan de Caramelo",
+                "en": "Caramel Flan",
+                "fr": "Flan au Caramel"
+            },
+            "descripcion": {
+                "es": "Flan de vainilla con salsa de caramelo.",
+                "en": "Vanilla flan with caramel sauce.",
+                "fr": "Flan à la vanille avec sauce caramel."
+            },
+            "precio": 4.00,
             "alergenos": [
                 "lacteos",
                 "huevos"
@@ -139,8 +636,3 @@
         }
     ]
 }
-
-
-
-
-

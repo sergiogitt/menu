@@ -1,7 +1,7 @@
 let productos = {};
 let alergenosSeleccionados = [];
 let globalLanguage = "es";
-let actualSection = "entradas";
+let actualSection = "entrantes";
 let langData = {};
 if (!localStorage.getItem('language')) {
     localStorage.setItem('language', "es");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             productos = data;
-            showSection('entradas');
+            showSection('entrantes');
         });
 });
 
@@ -34,28 +34,34 @@ function showSection(section) {
 
     htmlContent = `
     <div id="sectionWrapper">
-        <h3>
-            <span data-i18n="${section}"></span>
-            <button id="openModalBtn" class="button" onclick="openModal()">
-                <img class="icon" src="assets/img/filter.svg"/>
-                <span id="allergensTitle"  data-i18n="allergensTitle"></span>
-            </button>
-        </h3>
         <ul>
-            ${productosFiltrados.length > 0 ?
-                productosFiltrados.map(producto => `
-                    <li>
-                        <div class="price-wrapper">
-                            <span class="item-name">${producto.nombre[localStorage.getItem('language')]}</span>
-                            ${producto.alergenos.map(alergeno => `<img title="${alergeno.toUpperCase()}" src="assets/img/${alergeno}.png" alt="${alergeno}">`).join('')}
-                            <span class="price">${producto.precio.toFixed(2)}€</span>
-                        </div>
-                        <div>${producto.nombre[localStorage.getItem('language')]}</div>
-                        
-                    </li>
-                `).join('') :
-                `<li>No hay productos disponibles para tus selecciones.</li>`
-            }
+        ${productosFiltrados.length > 0 ?
+            productosFiltrados.map((producto, index) => `
+                ${index === 0 ? `
+                    <button id="openModalBtn" class="button" onclick="openModal()">
+                        <img class="icon" src="assets/img/filter.svg"/>
+                        <span id="allergensTitle" data-i18n="allergensTitle"></span>
+                    </button>
+                ` : ''}
+                
+                ${producto.subcategory? `
+                    <h3 data-i18n="${producto.subcategory}"></h3>
+                ` : ''}
+                
+                <li>
+                    <div class="price-wrapper">
+                        <span class="item-name">${producto.nombre[localStorage.getItem('language')]}</span>
+                        ${producto.alergenos.map(alergeno => `
+                            <img title="${alergeno.toUpperCase()}" src="assets/img/${alergeno}.png" alt="${alergeno}">
+                        `).join('')}
+                        <span class="price">${producto.precio.toFixed(2)}€</span>
+                    </div>
+                    <div>${producto.descripcion[localStorage.getItem('language')]}</div>
+                </li>
+            `).join('') :
+            `<li>No hay productos disponibles para tus selecciones.</li>`
+        }
+        
         </ul>
     </div>`;
     content.innerHTML = htmlContent;
